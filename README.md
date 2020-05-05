@@ -9,8 +9,23 @@ laravel:latest
 docker-compose.ymlのcontainer_nameを自分の任意の名前にする
 
 ```
-container_name: php-test2
+  php: # アプリケーションサーバの設定
+    container_name: php-test2  # 任意の名前
 ```
+
+```
+  nginx: # WEBサーバのコンテナの設定
+    image: nginx # nginxの公式イメージを使用
+    container_name: nginx-test2  # 任意の名前
+```
+
+# docker-compose.ymlの設定
+docker-compose.ymlのMYSQL_DATABASEを自分の任意の名前にする
+
+```
+MYSQL_DATABASE: database # 任意のDB名にしておく
+```
+
 
 # docker起動
 
